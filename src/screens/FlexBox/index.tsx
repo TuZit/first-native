@@ -1,7 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 
 const FlexBox = () => {
+  const windowWidth = useWindowDimensions().width;
+  const windowHeight = useWindowDimensions().height;
+  console.log(`width: ${windowWidth}, height: ${windowHeight}`);
+
   return (
     <View style={styles.container}>
       <Text style={styles.box}>aaaaaa</Text>
