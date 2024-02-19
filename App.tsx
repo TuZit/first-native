@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FlexBox from '@/screens/FlexBox';
 import Home from '@/screens/Home';
 import LearnFirst from '@/screens/LearnFirst';
+import Pokemon from '@/screens/Pokemon';
 
 const Stack = createNativeStackNavigator();
 const BottomBar = createBottomTabNavigator<any>();
@@ -33,6 +34,7 @@ const BottomTabBar = () => {
       <BottomBar.Screen name='Home' component={Home} />
       <BottomBar.Screen name='FlexBox' component={FlexBox} />
       <BottomBar.Screen name='LearnFirst' component={LearnFirst} />
+      <BottomBar.Screen name='pokemon' component={Pokemon} />
     </BottomBar.Navigator>
   );
 };
@@ -45,6 +47,7 @@ function App(): React.JSX.Element {
         <Stack.Screen name='FlexBox' component={FlexBox} />
         <Stack.Screen name='LearnFirst' component={LearnFirst} />
         <Stack.Screen name='bottom-bar' component={BottomTabBar} />
+        <Stack.Screen name='pokemon' component={Pokemon} />
       </Stack.Navigator>
     </NavigationContainer>
   );
