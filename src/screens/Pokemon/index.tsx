@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import PokemonCard from '@/components/Learning/PokemonCard';
 import React, { useEffect, useState } from 'react';
 import { FlatList, ScrollView, Text } from 'react-native';
@@ -23,7 +22,7 @@ const Pokemon = () => {
     Promise.all(promises).then(results => {
       const pokemon = results.map(result => ({
         name: result.name,
-        image: result.sprites['front_default'],
+        image: result.sprites.front_default,
         type: result.types
           .map(
             (type: {
