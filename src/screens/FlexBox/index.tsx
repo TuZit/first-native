@@ -1,3 +1,4 @@
+import { useRoute } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 
@@ -5,6 +6,9 @@ const FlexBox = () => {
   const windowWidth = useWindowDimensions().width;
   const windowHeight = useWindowDimensions().height;
   console.log(`width: ${windowWidth}, height: ${windowHeight}`);
+
+  const route = useRoute();
+  console.log(route);
 
   return (
     <View style={styles.container}>
